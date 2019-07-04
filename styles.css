@@ -58,6 +58,10 @@ button:hover, input[type=submit]:hover, input[type=button]:hover {
     border-left: 2px solid black;
 }
 
+.todo {
+    cursor: pointer;
+}
+
 .todo:hover {
     background-color: #e9ffe9;
 }

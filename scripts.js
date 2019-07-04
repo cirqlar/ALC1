@@ -1,5 +1,4 @@
 (function app(window) {
-
   const form = document.getElementById('TodoForm');
   const formTitle = document.getElementById('TodoFormTitle');
   const formId = document.getElementById('formId');
@@ -23,18 +22,11 @@
 
   clear.addEventListener('click', clearForm);
 
-  /**
-  * @param {string} id The id of the TODO
-  * @param {string} title The new TODO title
-  */
   function saveTODO(id, title) {
     const todo = document.getElementById(id);
     todo.firstChild.innerHTML = title;
   }
 
-  /**
-   * @param {string} title The TODO Title
-   */
   function createTODO(title) {
     // Remove NoTODOs
     if (todosDiv.children.length == 1) {
@@ -78,9 +70,6 @@
     todosDiv.appendChild(newTodo);
   }
 
-  /**
-   * @param {string} id The TODO id
-   */
   function editTodo(id) {
     const todo = document.getElementById(id);
     formId.value = id;
@@ -90,9 +79,6 @@
     formTitle.focus();
   }
 
-  /**
-   * @param {string} id The todo ID
-   */
   function deleteTodo(id) {
     const todo = document.getElementById(id);
     if (formId.value == id) { // Clear form if current TODO is being editted
@@ -108,9 +94,6 @@
     formTitle.focus();
   }
 
-  /**
-   * @author: Me
-   */
   function clearForm() {
     form.reset();
     formId.value = '';
