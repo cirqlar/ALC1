@@ -1,5 +1,4 @@
 (function app(window) {
-  why();
 
   const form = document.getElementById('TodoForm');
   const formTitle = document.getElementById('TodoFormTitle');
